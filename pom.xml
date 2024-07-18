@@ -13,9 +13,9 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <sonar.projectKey>your_project_key</sonar.projectKey>
-        <sonar.host.url>http://13.210.70.197:9000</sonar.host.url>
-        <sonar.login>your_sonar_token</sonar.login>
+        <sonar.projectKey>sonar-qube</sonar.projectKey>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.login>sqp_7348a05031ffff8922d67da9c3067a88fff9c0dd</sonar.login>
     </properties>
     
     <dependencies>
