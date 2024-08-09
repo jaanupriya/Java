@@ -13,9 +13,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <sonar.projectKey>sonar-qube</sonar.projectKey>
-        <sonar.host.url>http://107.21.222.83:9000/</sonar.host.url>
-        <sonar.login>sqp_084707027e4651f2887525fbc3b46e7ba5fd43a0</sonar.login>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
     <dependencies>
@@ -34,19 +32,21 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-                    <!-- Maven Jar Plugin -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.3.0</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>jar</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>     
+
+            <!-- Maven Jar Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>     
+
             <!-- SonarQube plugin -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
@@ -55,4 +55,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <sonar.projectKey>sonar-qube</sonar.projectKey>
+                <sonar.host.url>http://107.21.222.83:9000/</sonar.host.url>
+                <sonar.login>sqp_084707027e4651f2887525fbc3b46e7ba5fd43a0</sonar.login>
+            </properties>
+        </profile>
+    </profiles>
 </project>
