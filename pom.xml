@@ -21,6 +21,18 @@
     </dependencies>
     
     <build>
+        <sourceDirectory>${basedir}</sourceDirectory>
+
+        <resources>
+            <resource>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>**/*.java</include>
+                </includes>
+            </resource>
+        </resources>
+             
+                       
         <plugins>
             <!-- Compiler plugin to set the JDK version -->
             <plugin>
